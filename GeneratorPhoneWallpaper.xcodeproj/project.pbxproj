@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E0B8B3ED02138592D9D7FF4 /* Pods_GeneratorPhoneWallpaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E02C92DE15AEB752A501689 /* Pods_GeneratorPhoneWallpaper.framework */; };
 		7C725D482B8B8F08005017B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C725D472B8B8F08005017B5 /* AppDelegate.swift */; };
 		7C725D4A2B8B8F08005017B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C725D492B8B8F08005017B5 /* SceneDelegate.swift */; };
 		7C725D4C2B8B8F08005017B5 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C725D4B2B8B8F08005017B5 /* GeneratorViewController.swift */; };
@@ -22,6 +23,9 @@
 		7C725D502B8B8F09005017B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C725D532B8B8F09005017B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C725D552B8B8F09005017B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7E02C92DE15AEB752A501689 /* Pods_GeneratorPhoneWallpaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeneratorPhoneWallpaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B27A9AE7B2458B40C0216714 /* Pods-GeneratorPhoneWallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorPhoneWallpaper.debug.xcconfig"; path = "Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper.debug.xcconfig"; sourceTree = "<group>"; };
+		F1FAC797FE222389C4794B68 /* Pods-GeneratorPhoneWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorPhoneWallpaper.release.xcconfig"; path = "Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E0B8B3ED02138592D9D7FF4 /* Pods_GeneratorPhoneWallpaper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F2D72D6AB727B5AE90AAE34 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7E02C92DE15AEB752A501689 /* Pods_GeneratorPhoneWallpaper.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		659EE87E730B024F155D5D06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B27A9AE7B2458B40C0216714 /* Pods-GeneratorPhoneWallpaper.debug.xcconfig */,
+				F1FAC797FE222389C4794B68 /* Pods-GeneratorPhoneWallpaper.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7C725D3B2B8B8F08005017B5 = {
 			isa = PBXGroup;
 			children = (
 				7C725D462B8B8F08005017B5 /* GeneratorPhoneWallpaper */,
 				7C725D452B8B8F08005017B5 /* Products */,
+				659EE87E730B024F155D5D06 /* Pods */,
+				4F2D72D6AB727B5AE90AAE34 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,9 +120,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C725D582B8B8F09005017B5 /* Build configuration list for PBXNativeTarget "GeneratorPhoneWallpaper" */;
 			buildPhases = (
+				633B673DAC0B404275BCDC73 /* [CP] Check Pods Manifest.lock */,
 				7C725D402B8B8F08005017B5 /* Sources */,
 				7C725D412B8B8F08005017B5 /* Frameworks */,
 				7C725D422B8B8F08005017B5 /* Resources */,
+				BEEDCF617C411905C66C1CD4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +179,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		633B673DAC0B404275BCDC73 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeneratorPhoneWallpaper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEEDCF617C411905C66C1CD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C725D402B8B8F08005017B5 /* Sources */ = {
@@ -294,6 +363,7 @@
 		};
 		7C725D592B8B8F09005017B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B27A9AE7B2458B40C0216714 /* Pods-GeneratorPhoneWallpaper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -324,6 +394,7 @@
 		};
 		7C725D5A2B8B8F09005017B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1FAC797FE222389C4794B68 /* Pods-GeneratorPhoneWallpaper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
