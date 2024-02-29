@@ -7,7 +7,7 @@ def available_pods
 
   # UI
   pod 'SnapKit'
-  pod 'NMEasyTipView', '~> 1.2'
+  pod 'EasyTipView', '~> 2.1'
   pod 'lottie-ios'
   pod 'Kingfisher', '~> 7.0'
   pod 'Alamofire'
@@ -23,7 +23,7 @@ post_install do |installer|
     project.targets.each do |target|
       target.build_configurations.each do |config|
           # M1 Simulator
-          config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+          config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "x86_64"
           
           # Set deployment target to disable warnings
           config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'

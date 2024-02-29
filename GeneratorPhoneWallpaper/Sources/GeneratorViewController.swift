@@ -9,47 +9,82 @@ import UIKit
 
 class GeneratorViewController: UIViewController {
     
+    var text = "the cute white cat portrait ((beautiful pale cyberpunk female with heavy black eyeliner)), blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dark red city"
     
-    // MARK: - Outlets
+    // MARK: - State
     
-    private lazy var textField: UITextField = {
-        let textField = UITextField()
-        textField.keyboardType = .webSearch
-        textField.placeholder = "Search..."
-        textField.backgroundColor = .systemBrown
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.borderStyle = .line
-        textField.clearButtonMode = .whileEditing
-        return textField
-    }()
-
+    private var mainView = MainView()
+    
     //  MARK: - Lifecycle
-
+    
+    override func loadView() {
+        view = mainView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        setGradientBackground()
+        self.hideKeyboardWhenTappedAround()
+        mainView.textField.delegate = self
+        pushTransition()
+        navigationController?.delegate = self
     }
+    
+    override func viewDidLayoutSubviews() {
+        mainView.setGradientBackground()
+    }
+    
+    //  MARK: - Actions
+    
+    func pushTransition() {
+        mainView.onCompletion = { [weak self] in
+            guard let self else {
+                return
+            }
+            
+            if self.mainView.textField.text == "" {
+                
+            ShowAlert.shared.alert(view: self, title: "Nothing was written", message: "Please enter your request in the text field")
+                
+            } else {
+                let viewController = DetailViewController()
+                viewController.config(text: self.mainView.textField.text!)
+                self.navigationController?.pushViewController(viewController, animated: true)
+                self.mainView.textField.text = ""
+                
+            }
+        }
+    }
+}
 
-    // MARK: - Setup
+extension GeneratorViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(GeneratorViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
     
-    //  MARK: - Methods
-    
+    @objc func dismissKeyboard() {
+        view.endEditing(false)
+    }
+}
+
+extension GeneratorViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
         textField.resignFirstResponder()
+        self.pushTransition()
+        
         return true
     }
-    
-    func setGradientBackground() {
-        let violet = UIColor(named: "violet")?.cgColor ?? UIColor.purple.cgColor
-        let black = UIColor.black.cgColor
-
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.colors = [violet, black]
-        gradientLayer.locations = [0.0, 0.5]
-        gradientLayer.frame = self.view.bounds
-                
-        self.view.layer.insertSublayer(gradientLayer, at:0)
-    }
-
 }
+
+extension GeneratorViewController: UINavigationControllerDelegate {
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        if operation == .push {
+            return PushTransition()
+        }
+        return nil
+    }
+}
+
 

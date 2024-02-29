@@ -1,32 +1,32 @@
 PODS:
   - Alamofire (5.8.1)
+  - EasyTipView (2.1.0)
   - Kingfisher (7.11.0)
   - lottie-ios (4.4.1)
-  - NMEasyTipView (1.2)
   - SnapKit (5.7.1)
 
 DEPENDENCIES:
   - Alamofire
+  - EasyTipView (~> 2.1)
   - Kingfisher (~> 7.0)
   - lottie-ios
-  - NMEasyTipView (~> 1.2)
   - SnapKit
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Alamofire
+    - EasyTipView
     - Kingfisher
     - lottie-ios
-    - NMEasyTipView
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  EasyTipView: a92b6edc377b81c5ac18e9fd35d5ee78e9409488
   Kingfisher: b9c985d864d43515f404f1ef4a8ce7d802ace3ac
   lottie-ios: e047b1d2e6239b787cc5e9755b988869cf190494
-  NMEasyTipView: 04948bb8ee01b22957095e1427be972115b57d02
   SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
 
-PODFILE CHECKSUM: a1a95f682a73c391520a298f769ec9f9dbae53c7
+PODFILE CHECKSUM: 15aa4d0d89d27fb147e0d8e69400c7d6d7ea8fdb
 
 COCOAPODS: 1.15.2
