@@ -21,10 +21,10 @@ class GeneratorViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround()
         mainView.textField.delegate = self
         pushTransition()
         navigationController?.delegate = self
+        self.hideKeyboardWhenTappedAround()
     }
     
     override func viewDidLayoutSubviews() {

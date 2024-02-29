@@ -35,12 +35,12 @@ class DetailViewController: UIViewController {
     //  MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.hidesBackButton = true
         view.backgroundColor = .purple
         setupHierarchy()
         setupLayout()
         startTimer()
         updateTimerLabel()
-        navigationItem.hidesBackButton = true
     }
     
     // MARK: - Setup
@@ -87,7 +87,6 @@ class DetailViewController: UIViewController {
                 self?.stopTimer()
                 self?.animationView.stop()
                 self?.pushTransition()
-                
             case .failure(let error):
                 self?.showRetryAlert()
                 print("Error: \(error.localizedDescription)")
@@ -103,9 +102,9 @@ class DetailViewController: UIViewController {
     
     @objc func updateTimer() {
         if remainingTime > 0 {
+            self.animationView.play()
             remainingTime -= 1
             updateTimerLabel()
-            self.animationView.play()
         } else {
             stopTimer()
             self.labelTime.text = "we need a little more time"
@@ -119,10 +118,8 @@ class DetailViewController: UIViewController {
     }
     
     func updateTimerLabel() {
-        DispatchQueue.main.async {
-            let seconds = self.remainingTime % 60
-            self.labelTime.text = "estimated time" + " " + String(format: "%02d", seconds) + " " + "sec"
-        }
+        let seconds = self.remainingTime % 60
+        self.labelTime.text = "estimated time" + " " + String(format: "%02d", seconds) + " " + "sec"
     }
     
     //  MARK: - Methods
