@@ -9,21 +9,45 @@
 /* Begin PBXBuildFile section */
 		7C725D482B8B8F08005017B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C725D472B8B8F08005017B5 /* AppDelegate.swift */; };
 		7C725D4A2B8B8F08005017B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C725D492B8B8F08005017B5 /* SceneDelegate.swift */; };
-		7C725D4C2B8B8F08005017B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C725D4B2B8B8F08005017B5 /* ViewController.swift */; };
-		7C725D4F2B8B8F08005017B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C725D4D2B8B8F08005017B5 /* Main.storyboard */; };
+		7C725D4C2B8B8F08005017B5 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C725D4B2B8B8F08005017B5 /* GeneratorViewController.swift */; };
 		7C725D512B8B8F09005017B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C725D502B8B8F09005017B5 /* Assets.xcassets */; };
 		7C725D542B8B8F09005017B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C725D522B8B8F09005017B5 /* LaunchScreen.storyboard */; };
+		7CA7E66A2B8D561F00E5A7E0 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E6692B8D561F00E5A7E0 /* MainView.swift */; };
+		7CA7E66C2B8D5F8900E5A7E0 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA7E66B2B8D5F8900E5A7E0 /* CustomTextField.swift */; };
+		7CE82FB92B8E2F080072BA27 /* Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE82FB82B8E2F080072BA27 /* Networking.swift */; };
+		7CE82FBB2B8E335B0072BA27 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE82FBA2B8E335B0072BA27 /* Models.swift */; };
+		7CE82FBF2B8E3B460072BA27 /* KFisherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE82FBE2B8E3B460072BA27 /* KFisherManager.swift */; };
+		7CE82FC12B8E3CFF0072BA27 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE82FC02B8E3CFF0072BA27 /* DetailViewController.swift */; };
+		7CE82FC32B8F90BA0072BA27 /* PushTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE82FC22B8F90BA0072BA27 /* PushTransition.swift */; };
+		7CE82FC52B8F918F0072BA27 /* Aniki Hamster.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CE82FC42B8F918F0072BA27 /* Aniki Hamster.json */; };
+		7CE82FC72B8FD3460072BA27 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE82FC62B8FD3460072BA27 /* Alert.swift */; };
+		7CE82FC92B8FF1060072BA27 /* WallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE82FC82B8FF1060072BA27 /* WallpaperViewController.swift */; };
+		7CE82FD12B9137F40072BA27 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CE82FD02B9137F40072BA27 /* Poppins-Regular.ttf */; };
+		C8FE1A514FF122D584252400 /* Pods_GeneratorPhoneWallpaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADEC74F5760E6A9F29613D8 /* Pods_GeneratorPhoneWallpaper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E958694F0F333AFFA8057D3 /* Pods-GeneratorPhoneWallpaper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorPhoneWallpaper.release.xcconfig"; path = "Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper.release.xcconfig"; sourceTree = "<group>"; };
+		6ADEC74F5760E6A9F29613D8 /* Pods_GeneratorPhoneWallpaper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeneratorPhoneWallpaper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C725D442B8B8F08005017B5 /* GeneratorPhoneWallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeneratorPhoneWallpaper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C725D472B8B8F08005017B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C725D492B8B8F08005017B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7C725D4B2B8B8F08005017B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7C725D4E2B8B8F08005017B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7C725D4B2B8B8F08005017B5 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
 		7C725D502B8B8F09005017B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7C725D532B8B8F09005017B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7C725D552B8B8F09005017B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7CA7E6692B8D561F00E5A7E0 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7CA7E66B2B8D5F8900E5A7E0 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		7CE82FB82B8E2F080072BA27 /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
+		7CE82FBA2B8E335B0072BA27 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		7CE82FBE2B8E3B460072BA27 /* KFisherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KFisherManager.swift; sourceTree = "<group>"; };
+		7CE82FC02B8E3CFF0072BA27 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7CE82FC22B8F90BA0072BA27 /* PushTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushTransition.swift; sourceTree = "<group>"; };
+		7CE82FC42B8F918F0072BA27 /* Aniki Hamster.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Aniki Hamster.json"; sourceTree = "<group>"; };
+		7CE82FC62B8FD3460072BA27 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		7CE82FC82B8FF1060072BA27 /* WallpaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperViewController.swift; sourceTree = "<group>"; };
+		7CE82FD02B9137F40072BA27 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		DBA14C9E1F8596DC49D0FD6E /* Pods-GeneratorPhoneWallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorPhoneWallpaper.debug.xcconfig"; path = "Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +55,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8FE1A514FF122D584252400 /* Pods_GeneratorPhoneWallpaper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		659EE87E730B024F155D5D06 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DBA14C9E1F8596DC49D0FD6E /* Pods-GeneratorPhoneWallpaper.debug.xcconfig */,
+				4E958694F0F333AFFA8057D3 /* Pods-GeneratorPhoneWallpaper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7C725D3B2B8B8F08005017B5 = {
 			isa = PBXGroup;
 			children = (
 				7C725D462B8B8F08005017B5 /* GeneratorPhoneWallpaper */,
 				7C725D452B8B8F08005017B5 /* Products */,
+				659EE87E730B024F155D5D06 /* Pods */,
+				D84D6E5F6CEA2BF3F3F6E67D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +92,105 @@
 		7C725D462B8B8F08005017B5 /* GeneratorPhoneWallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				7C725D5C2B8CDA78005017B5 /* Sources */,
+				7C725D5D2B8CDA98005017B5 /* Resources */,
+			);
+			path = GeneratorPhoneWallpaper;
+			sourceTree = "<group>";
+		};
+		7C725D5B2B8CDA6D005017B5 /* App */ = {
+			isa = PBXGroup;
+			children = (
 				7C725D472B8B8F08005017B5 /* AppDelegate.swift */,
 				7C725D492B8B8F08005017B5 /* SceneDelegate.swift */,
-				7C725D4B2B8B8F08005017B5 /* ViewController.swift */,
-				7C725D4D2B8B8F08005017B5 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		7C725D5C2B8CDA78005017B5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				7C725D5B2B8CDA6D005017B5 /* App */,
+				7CE82FBC2B8E3B060072BA27 /* Models */,
+				7CE82FCE2B902EE50072BA27 /* Views */,
+				7CE82FCD2B902EBC0072BA27 /* Controllers */,
+				7CE82FBD2B8E3B120072BA27 /* Managers */,
+				7CE82FCC2B902E730072BA27 /* Extensions */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		7C725D5D2B8CDA98005017B5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7CE82FC42B8F918F0072BA27 /* Aniki Hamster.json */,
+				7CE82FD02B9137F40072BA27 /* Poppins-Regular.ttf */,
 				7C725D502B8B8F09005017B5 /* Assets.xcassets */,
 				7C725D522B8B8F09005017B5 /* LaunchScreen.storyboard */,
 				7C725D552B8B8F09005017B5 /* Info.plist */,
 			);
-			path = GeneratorPhoneWallpaper;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7CE82FBC2B8E3B060072BA27 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7CE82FBA2B8E335B0072BA27 /* Models.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7CE82FBD2B8E3B120072BA27 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7CE82FB82B8E2F080072BA27 /* Networking.swift */,
+				7CE82FBE2B8E3B460072BA27 /* KFisherManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7CE82FCC2B902E730072BA27 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CE82FC62B8FD3460072BA27 /* Alert.swift */,
+				7CE82FCF2B902F140072BA27 /* VC + AnimatedTransitioning */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7CE82FCD2B902EBC0072BA27 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C725D4B2B8B8F08005017B5 /* GeneratorViewController.swift */,
+				7CE82FC02B8E3CFF0072BA27 /* DetailViewController.swift */,
+				7CE82FC82B8FF1060072BA27 /* WallpaperViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7CE82FCE2B902EE50072BA27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7E6692B8D561F00E5A7E0 /* MainView.swift */,
+				7CA7E66B2B8D5F8900E5A7E0 /* CustomTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CE82FCF2B902F140072BA27 /* VC + AnimatedTransitioning */ = {
+			isa = PBXGroup;
+			children = (
+				7CE82FC22B8F90BA0072BA27 /* PushTransition.swift */,
+			);
+			path = "VC + AnimatedTransitioning";
+			sourceTree = "<group>";
+		};
+		D84D6E5F6CEA2BF3F3F6E67D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6ADEC74F5760E6A9F29613D8 /* Pods_GeneratorPhoneWallpaper.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C725D582B8B8F09005017B5 /* Build configuration list for PBXNativeTarget "GeneratorPhoneWallpaper" */;
 			buildPhases = (
+				19E38372132B856359168E04 /* [CP] Check Pods Manifest.lock */,
 				7C725D402B8B8F08005017B5 /* Sources */,
 				7C725D412B8B8F08005017B5 /* Frameworks */,
 				7C725D422B8B8F08005017B5 /* Resources */,
+				741DA98E99CC0267ED9AA963 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,36 +253,80 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7CE82FC52B8F918F0072BA27 /* Aniki Hamster.json in Resources */,
 				7C725D542B8B8F09005017B5 /* LaunchScreen.storyboard in Resources */,
 				7C725D512B8B8F09005017B5 /* Assets.xcassets in Resources */,
-				7C725D4F2B8B8F08005017B5 /* Main.storyboard in Resources */,
+				7CE82FD12B9137F40072BA27 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		19E38372132B856359168E04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeneratorPhoneWallpaper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		741DA98E99CC0267ED9AA963 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7C725D402B8B8F08005017B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C725D4C2B8B8F08005017B5 /* ViewController.swift in Sources */,
+				7C725D4C2B8B8F08005017B5 /* GeneratorViewController.swift in Sources */,
+				7CE82FC32B8F90BA0072BA27 /* PushTransition.swift in Sources */,
+				7CA7E66A2B8D561F00E5A7E0 /* MainView.swift in Sources */,
 				7C725D482B8B8F08005017B5 /* AppDelegate.swift in Sources */,
+				7CE82FBB2B8E335B0072BA27 /* Models.swift in Sources */,
 				7C725D4A2B8B8F08005017B5 /* SceneDelegate.swift in Sources */,
+				7CE82FC72B8FD3460072BA27 /* Alert.swift in Sources */,
+				7CA7E66C2B8D5F8900E5A7E0 /* CustomTextField.swift in Sources */,
+				7CE82FC12B8E3CFF0072BA27 /* DetailViewController.swift in Sources */,
+				7CE82FBF2B8E3B460072BA27 /* KFisherManager.swift in Sources */,
+				7CE82FC92B8FF1060072BA27 /* WallpaperViewController.swift in Sources */,
+				7CE82FB92B8E2F080072BA27 /* Networking.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		7C725D4D2B8B8F08005017B5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7C725D4E2B8B8F08005017B5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7C725D522B8B8F09005017B5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +454,7 @@
 		};
 		7C725D592B8B8F09005017B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DBA14C9E1F8596DC49D0FD6E /* Pods-GeneratorPhoneWallpaper.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -289,12 +462,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HH9D8WXQ67;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GeneratorPhoneWallpaper/Info.plist;
+				INFOPLIST_FILE = GeneratorPhoneWallpaper/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,14 +474,18 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sonyigorevna.GeneratorPhoneWallpaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7C725D5A2B8B8F09005017B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E958694F0F333AFFA8057D3 /* Pods-GeneratorPhoneWallpaper.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -317,12 +493,11 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = HH9D8WXQ67;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GeneratorPhoneWallpaper/Info.plist;
+				INFOPLIST_FILE = GeneratorPhoneWallpaper/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +505,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ru.sonyigorevna.GeneratorPhoneWallpaper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
