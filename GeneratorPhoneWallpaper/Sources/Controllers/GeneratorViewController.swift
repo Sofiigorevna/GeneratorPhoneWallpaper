@@ -9,8 +9,6 @@ import UIKit
 
 class GeneratorViewController: UIViewController {
     
-    var text = "the cute white cat portrait ((beautiful pale cyberpunk female with heavy black eyeliner)), blue eyes, shaved side haircut, hyper detail, cinematic lighting, magic neon, dark red city"
-    
     // MARK: - State
     
     private var mainView = MainView()
@@ -42,15 +40,15 @@ class GeneratorViewController: UIViewController {
             }
             
             if self.mainView.textField.text == "" {
-                
-            ShowAlert.shared.alert(view: self, title: "Nothing was written", message: "Please enter your request in the text field")
-                
+            ShowAlert.shared.alert(
+                view: self,
+                title: "Nothing was written",
+                message: "Please enter your request in the text field")
             } else {
                 let viewController = DetailViewController()
                 viewController.config(text: self.mainView.textField.text!)
                 self.navigationController?.pushViewController(viewController, animated: true)
                 self.mainView.textField.text = ""
-                
             }
         }
     }
@@ -70,10 +68,8 @@ extension GeneratorViewController {
 
 extension GeneratorViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
         textField.resignFirstResponder()
         self.pushTransition()
-        
         return true
     }
 }

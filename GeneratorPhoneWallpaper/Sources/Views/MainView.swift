@@ -10,16 +10,13 @@ import UIKit
 
 final class MainView: UIView {
     
-    
     typealias CompletionBlock = () -> Void
     var onCompletion: CompletionBlock?
-
     
     // MARK: - Outlets
     
      lazy var textField: CustomTextField = {
         let textField = CustomTextField(placeholder: "Search your picture...")
-        textField.translatesAutoresizingMaskIntoConstraints = false
         return textField
     }()
     
@@ -39,7 +36,6 @@ final class MainView: UIView {
     
     let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 55, height: 30))
     
-
     // MARK: - Initializers
     
     override init(frame: CGRect) {
@@ -48,16 +44,14 @@ final class MainView: UIView {
         setupLayout()
         setupTextField()
         keyboardAppear()
-    
     }
-    
+        
     required init?(coder: NSCoder) {
         fatalError("Error in MainView")
     }
     
     deinit {
         NotificationCenter.default.removeObserver(self)
-        print("deinit NotificationCenter")
     }
     
     // MARK: - Setup
@@ -69,7 +63,7 @@ final class MainView: UIView {
     private func setupLayout() {
         textField.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(620)
+            make.top.equalToSuperview().offset(580)
             make.width.equalTo(350)
             make.height.equalTo(45)
         }
@@ -80,6 +74,7 @@ final class MainView: UIView {
         textField.rightView = rightView
         textField.rightViewMode = .always
     }
+    
     //  MARK: - Actions
 
     @objc func buttonTapped() {
@@ -124,8 +119,9 @@ final class MainView: UIView {
     }
     
     @objc func keyboardWillShow(sender: NSNotification) {
+        
         textField.snp.updateConstraints { (make) in
-            make.top.equalToSuperview().offset(450)
+            make.top.equalToSuperview().offset(420)
         }
         UIView.animate(withDuration: 0.3) {
             self.layoutIfNeeded()
@@ -134,7 +130,7 @@ final class MainView: UIView {
     
     @objc func keyboardWillHide(sender: NSNotification) {
         textField.snp.updateConstraints { (make) in
-            make.top.equalToSuperview().offset(620)
+            make.top.equalToSuperview().offset(580)
         }
         UIView.animate(withDuration: 0.3) {
             self.layoutIfNeeded()

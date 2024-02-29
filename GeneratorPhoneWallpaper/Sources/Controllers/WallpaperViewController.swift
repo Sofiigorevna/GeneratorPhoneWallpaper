@@ -7,11 +7,15 @@
 
 import UIKit
 import Kingfisher
+import EasyTipView
 
 class WallpaperViewController: UIViewController {
     
     var isHide: Bool = false
-    
+    var easyTipView: EasyTipView?
+    var preferences = EasyTipView.Preferences()
+    let feedBackGenerator = UIImpactFeedbackGenerator(style: .light)
+
     // MARK: - Outlets
     
     private lazy var picture: UIImageView = {
@@ -25,7 +29,7 @@ class WallpaperViewController: UIViewController {
     
     private lazy var titleForTime: UILabel = {
         var label = UILabel()
-        label.font = .boldSystemFont(ofSize: 60)
+        label.font = .boldSystemFont(ofSize: 90)
         label.text = "22:00"
         label.numberOfLines =  1
         label.textColor = .white
@@ -36,7 +40,7 @@ class WallpaperViewController: UIViewController {
     
     private lazy var titleForDate: UILabel = {
         var label = UILabel()
-        label.font = .boldSystemFont(ofSize: 24)
+        label.font = .boldSystemFont(ofSize: 22)
         label.text = "Friday, March 10"
         label.numberOfLines =  1
         label.textColor = .white
@@ -66,7 +70,7 @@ class WallpaperViewController: UIViewController {
         button.setImage(UIImage(systemName: "arrow.down"), for: .normal)
         button.tintColor = .gray
         button.backgroundColor = .black
-        //       button.addTarget(self, action: #selector(buttonTapped),for: .touchUpInside)
+        button.addTarget(self, action: #selector(saveButtonTapped),for: .touchUpInside)
         return button
     }()
     
@@ -104,6 +108,13 @@ class WallpaperViewController: UIViewController {
         setupNavigationBar()
         setupHierarchy()
         setupLayout()
+        setupEasyTipView()
+        feedBackGenerator.prepare()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        easyTipView?.dismiss()
     }
     
     // MARK: - Setup
@@ -111,6 +122,13 @@ class WallpaperViewController: UIViewController {
     func setupNavigationBar() {
         let back = UIBarButtonItem(customView: backRootVCButton)
         navigationItem.leftBarButtonItem = back
+    }
+    
+    func setupEasyTipView() {
+        preferences.drawing.backgroundColor = UIColor.black.withAlphaComponent(0.3)
+        preferences.drawing.foregroundColor = .white
+        preferences.drawing.arrowPosition = .bottom
+        easyTipView = EasyTipView(text: "Saved in gallery", preferences: preferences)
     }
     
     private func setupHierarchy() {
@@ -153,6 +171,16 @@ class WallpaperViewController: UIViewController {
     
     //  MARK: - Actions
     
+    @objc func saveButtonTapped() {
+        feedBackGenerator.impactOccurred()
+        
+        guard let image = picture.image else {
+            return
+        }
+        
+        saveImageToPhotoLibrary(image)
+    }
+    
     @objc func hideTitleTime() {
         if !isHide {
             stackTitle.isHidden = false
@@ -177,4 +205,36 @@ class WallpaperViewController: UIViewController {
             with: URL(string: url),
             imageView: picture)
     }
+    
+    func showToolTip() {
+            self.easyTipView?.show(forView: self.savedButton)
+        Timer.scheduledTimer(
+            withTimeInterval: 2.0,
+            repeats: false) { [weak self] timer in
+            self?.easyTipView?.dismiss()
+        }
+    }
+    
+    func saveImageToPhotoLibrary(_ image: UIImage) {
+        UIImageWriteToSavedPhotosAlbum(
+            image,
+            self,
+            #selector(imageCheck),
+            nil)
+            }
+    
+    @objc func imageCheck(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            print("Ошибка сохранения изображения: \(error.localizedDescription)")
+            ShowAlert.shared.alert(
+                view: self,
+                title: "Oooops",
+                message: "An error occurred, repeat the operation")
+        } else {
+            print("Изображение успешно сохранено в галерею")
+            showToolTip()
+
+        }
+    }
 }
+

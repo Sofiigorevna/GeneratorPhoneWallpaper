@@ -22,7 +22,7 @@
 		7CE82FC52B8F918F0072BA27 /* Aniki Hamster.json in Resources */ = {isa = PBXBuildFile; fileRef = 7CE82FC42B8F918F0072BA27 /* Aniki Hamster.json */; };
 		7CE82FC72B8FD3460072BA27 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE82FC62B8FD3460072BA27 /* Alert.swift */; };
 		7CE82FC92B8FF1060072BA27 /* WallpaperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE82FC82B8FF1060072BA27 /* WallpaperViewController.swift */; };
-		7CE82FCB2B9026090072BA27 /* SignikaNegative-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CE82FCA2B9026090072BA27 /* SignikaNegative-VariableFont_wght.ttf */; };
+		7CE82FD12B9137F40072BA27 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7CE82FD02B9137F40072BA27 /* Poppins-Regular.ttf */; };
 		C8FE1A514FF122D584252400 /* Pods_GeneratorPhoneWallpaper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6ADEC74F5760E6A9F29613D8 /* Pods_GeneratorPhoneWallpaper.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,7 @@
 		7CE82FC42B8F918F0072BA27 /* Aniki Hamster.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Aniki Hamster.json"; sourceTree = "<group>"; };
 		7CE82FC62B8FD3460072BA27 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		7CE82FC82B8FF1060072BA27 /* WallpaperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WallpaperViewController.swift; sourceTree = "<group>"; };
-		7CE82FCA2B9026090072BA27 /* SignikaNegative-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SignikaNegative-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		7CE82FD02B9137F40072BA27 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		DBA14C9E1F8596DC49D0FD6E /* Pods-GeneratorPhoneWallpaper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeneratorPhoneWallpaper.debug.xcconfig"; path = "Target Support Files/Pods-GeneratorPhoneWallpaper/Pods-GeneratorPhoneWallpaper.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,15 +111,11 @@
 			isa = PBXGroup;
 			children = (
 				7C725D5B2B8CDA6D005017B5 /* App */,
-				7C725D4B2B8B8F08005017B5 /* GeneratorViewController.swift */,
-				7CE82FC02B8E3CFF0072BA27 /* DetailViewController.swift */,
-				7CE82FC82B8FF1060072BA27 /* WallpaperViewController.swift */,
-				7CA7E6692B8D561F00E5A7E0 /* MainView.swift */,
-				7CE82FBD2B8E3B120072BA27 /* Managers */,
 				7CE82FBC2B8E3B060072BA27 /* Models */,
-				7CA7E66B2B8D5F8900E5A7E0 /* CustomTextField.swift */,
-				7CE82FC22B8F90BA0072BA27 /* PushTransition.swift */,
-				7CE82FC62B8FD3460072BA27 /* Alert.swift */,
+				7CE82FCE2B902EE50072BA27 /* Views */,
+				7CE82FCD2B902EBC0072BA27 /* Controllers */,
+				7CE82FBD2B8E3B120072BA27 /* Managers */,
+				7CE82FCC2B902E730072BA27 /* Extensions */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -128,7 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				7CE82FC42B8F918F0072BA27 /* Aniki Hamster.json */,
-				7CE82FCA2B9026090072BA27 /* SignikaNegative-VariableFont_wght.ttf */,
+				7CE82FD02B9137F40072BA27 /* Poppins-Regular.ttf */,
 				7C725D502B8B8F09005017B5 /* Assets.xcassets */,
 				7C725D522B8B8F09005017B5 /* LaunchScreen.storyboard */,
 				7C725D552B8B8F09005017B5 /* Info.plist */,
@@ -151,6 +147,42 @@
 				7CE82FBE2B8E3B460072BA27 /* KFisherManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		7CE82FCC2B902E730072BA27 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7CE82FC62B8FD3460072BA27 /* Alert.swift */,
+				7CE82FCF2B902F140072BA27 /* VC + AnimatedTransitioning */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		7CE82FCD2B902EBC0072BA27 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7C725D4B2B8B8F08005017B5 /* GeneratorViewController.swift */,
+				7CE82FC02B8E3CFF0072BA27 /* DetailViewController.swift */,
+				7CE82FC82B8FF1060072BA27 /* WallpaperViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7CE82FCE2B902EE50072BA27 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7CA7E6692B8D561F00E5A7E0 /* MainView.swift */,
+				7CA7E66B2B8D5F8900E5A7E0 /* CustomTextField.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7CE82FCF2B902F140072BA27 /* VC + AnimatedTransitioning */ = {
+			isa = PBXGroup;
+			children = (
+				7CE82FC22B8F90BA0072BA27 /* PushTransition.swift */,
+			);
+			path = "VC + AnimatedTransitioning";
 			sourceTree = "<group>";
 		};
 		D84D6E5F6CEA2BF3F3F6E67D /* Frameworks */ = {
@@ -222,9 +254,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CE82FC52B8F918F0072BA27 /* Aniki Hamster.json in Resources */,
-				7CE82FCB2B9026090072BA27 /* SignikaNegative-VariableFont_wght.ttf in Resources */,
 				7C725D542B8B8F09005017B5 /* LaunchScreen.storyboard in Resources */,
 				7C725D512B8B8F09005017B5 /* Assets.xcassets in Resources */,
+				7CE82FD12B9137F40072BA27 /* Poppins-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,7 +11,7 @@ import Lottie
 class DetailViewController: UIViewController {
     
     // MARK: - State
-
+    
     let viewController = WallpaperViewController()
     let animationView = LottieAnimationView(name: "Aniki Hamster")
     weak var timer: Timer?
@@ -24,7 +24,7 @@ class DetailViewController: UIViewController {
     
     private lazy var labelTime: UILabel = {
         var label = UILabel()
-        label.font = UIFont(name: "SignikaNegative-VariableFont_wght", size: 47)
+        label.font = UIFont(name: "Poppins-Regular", size: 22)
         label.textColor = .black
         label.numberOfLines =  1
         label.textAlignment = .center
@@ -60,7 +60,7 @@ class DetailViewController: UIViewController {
         labelTime.snp.makeConstraints { make in
             make.width.equalTo(300)
             make.height.equalTo(60)
-            make.top.equalTo(130)
+            make.top.equalTo(170)
             make.leading.equalTo(40)
         }
     }
@@ -85,13 +85,12 @@ class DetailViewController: UIViewController {
                 self?.url = url
                 self?.viewController.configuration(url: url)
                 self?.stopTimer()
-                sleep(3)
+                self?.animationView.stop()
                 self?.pushTransition()
                 
             case .failure(let error):
                 self?.showRetryAlert()
                 print("Error: \(error.localizedDescription)")
-                
             }
         }
     }
@@ -110,15 +109,13 @@ class DetailViewController: UIViewController {
         } else {
             stopTimer()
             self.labelTime.text = "we need a little more time"
-            animationView.stop()
         }
     }
+    
     func stopTimer() {
-        DispatchQueue.main.async {
-            self.timer?.invalidate()
-            self.timer = nil
-            self.remainingTime = 5
-        }
+        self.timer?.invalidate()
+        self.timer = nil
+        self.remainingTime = 5
     }
     
     func updateTimerLabel() {
@@ -151,10 +148,9 @@ class DetailViewController: UIViewController {
         
         let cancelAction = UIAlertAction(title: "Отмена", style: .cancel) { [weak self] (_) in
             self?.navigationController?.popToRootViewController(animated: true)
-            
         }
-        alertController.addAction(cancelAction)
         
+        alertController.addAction(cancelAction)
         present(alertController, animated: true, completion: nil)
     }
     

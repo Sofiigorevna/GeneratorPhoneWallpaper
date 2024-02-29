@@ -7,6 +7,8 @@
 
 import Foundation
 
+// MARK: - Request
+
 struct GenerateImageRequest: Codable {
     let modelId: String
     let key, prompt: String
@@ -24,6 +26,8 @@ struct GenerateImageRequest: Codable {
         case modelId = "model_id"
     }
 }
+
+// MARK: - Response
 
 struct GenerateImageResponse: Codable {
     let status, tip: String

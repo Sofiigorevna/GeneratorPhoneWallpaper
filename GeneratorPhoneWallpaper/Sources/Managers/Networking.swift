@@ -75,7 +75,6 @@ class NetworkManager {
                     if let data = data {
                         let jsonData = try JSONDecoder().decode(GenerateImageResponse.self, from: data)
                         completion(.success(jsonData))
-                        print(jsonData)
                     }
                 } catch {
                     debugPrint(error.localizedDescription)
