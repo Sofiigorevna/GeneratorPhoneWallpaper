@@ -14,7 +14,7 @@ class DetailViewController: UIViewController {
     
     let viewController = WallpaperViewController()
     let animationView = LottieAnimationView(name: "Aniki Hamster")
-    weak var timer: Timer?
+    var timer: Timer?
     private var remainingTime = 5
     
     var url = String()
@@ -97,7 +97,13 @@ class DetailViewController: UIViewController {
     // MARK: - Time
     
     func startTimer() {
-        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timer = Timer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        guard let timer = timer else {
+            return
+        }
+        
+        RunLoop.main.add(timer, forMode: .common)
+//        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer() {

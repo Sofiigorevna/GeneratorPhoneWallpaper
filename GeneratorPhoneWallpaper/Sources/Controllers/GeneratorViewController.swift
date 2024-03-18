@@ -28,6 +28,7 @@ class GeneratorViewController: UIViewController {
     }
     
     override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
         mainView.setGradientBackground()
     }
     
@@ -46,7 +47,11 @@ class GeneratorViewController: UIViewController {
                 message: "Please enter your request in the text field")
             } else {
                 let viewController = DetailViewController()
-                viewController.config(text: self.mainView.textField.text!)
+                
+                guard let text = self.mainView.textField.text else {
+                    return
+                }
+                viewController.config(text: text)
                 self.navigationController?.pushViewController(viewController, animated: true)
                 self.mainView.textField.text = ""
             }
