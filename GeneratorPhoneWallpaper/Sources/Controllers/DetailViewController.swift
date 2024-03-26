@@ -103,7 +103,6 @@ class DetailViewController: UIViewController {
         }
         
         RunLoop.main.add(timer, forMode: .common)
-//        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
     }
     
     @objc func updateTimer() {
